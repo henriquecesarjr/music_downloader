@@ -1,9 +1,9 @@
-const DownloadMusics = require("../dtos/downloadMusic.dto");
+const DownloadMusicsDto = require("../dtos/downloadMusic.dto");
 const http = require("../infra/http/axiosClient");
 
 class MusicService {
   async initiateDownloadProcess(req) {
-    const dto = new DownloadMusics(req.body);
+    const dto = new DownloadMusicsDto(req.body);
     dto.validate();
 
     try {
